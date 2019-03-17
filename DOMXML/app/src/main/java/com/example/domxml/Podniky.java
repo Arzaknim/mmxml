@@ -1,0 +1,52 @@
+package com.example.domxml;
+
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+public class Podniky {
+    private ArrayList<Podnik> list;
+
+    public Podniky(){
+        list = new ArrayList<>();
+    }
+
+    public ArrayList<Podnik> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Podnik> list) {
+        this.list = list;
+    }
+    public boolean addPodnik(Podnik p){
+      return list.add(p);
+    }
+
+    public Podnik getPodnik(int index){
+       return list.get(index);
+    }
+
+    public void printPodnikyByName(String str, TextView textview){
+        boolean x = true;
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).getObchodne_Meno().contains(str)){
+                textview.setText(textview.getText() + list.get(i).getObchodne_Meno() + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzka() + "\n");
+                textview.setText(textview.getText() + list.get(i).getCinnost() + "\n");
+                textview.setText(textview.getText() + list.get(i).getUlica() + "\n");
+                textview.setText(textview.getText() + list.get(i).getSup_C() + "\n");
+                textview.setText(textview.getText() + list.get(i).getOr_C() + "\n");
+                textview.setText(textview.getText() + list.get(i).getObec() + "\n");
+                textview.setText(textview.getText() + list.get(i).getAdresa_Prevadzky() + "\n");
+                textview.setText(textview.getText() + list.get(i).getICO() + "\n");
+                textview.setText(textview.getText() + list.get(i).getDatum_Zacatia_Prevadzky() + "\n\n\n");
+                x = false;
+            }
+
+        }
+        if (x) {
+            textview.setText("Nic sa nenaslo.");
+        }
+    }
+
+}
