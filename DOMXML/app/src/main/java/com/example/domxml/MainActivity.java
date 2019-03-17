@@ -105,8 +105,8 @@ public class MainActivity extends Activity {
                         for (int i = 0; i < 7; i++) {
                             tmp[i] = eElement.getAttribute("col_" + 1 + i);
                         }
-                        /*podniky.get(temp).setPrevadzkova_Doba(tmp);
-                        textview.setText(textview.getText() + podniky.get(temp).getObchodne_Meno() + "\n");
+                        podniky.getPodnik(temp).setPrevadzkova_Doba(tmp);
+                        /*textview.setText(textview.getText() + podniky.get(temp).getObchodne_Meno() + "\n");
                         textview.setText(textview.getText() + podniky.get(temp).getPrevadzka() + "\n");
                         textview.setText(textview.getText() + podniky.get(temp).getCinnost() + "\n");
                         textview.setText(textview.getText() + podniky.get(temp).getUlica() + "\n");

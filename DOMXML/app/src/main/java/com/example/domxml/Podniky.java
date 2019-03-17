@@ -39,7 +39,14 @@ public class Podniky {
                 textview.setText(textview.getText() + list.get(i).getObec() + "\n");
                 textview.setText(textview.getText() + list.get(i).getAdresa_Prevadzky() + "\n");
                 textview.setText(textview.getText() + list.get(i).getICO() + "\n");
-                textview.setText(textview.getText() + list.get(i).getDatum_Zacatia_Prevadzky() + "\n\n\n");
+                textview.setText(textview.getText() + list.get(i).getDatum_Zacatia_Prevadzky() + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(0) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(1) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(2) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(3) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(4) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(5) + "\n");
+                textview.setText(textview.getText() + list.get(i).getPrevadzkova_Doba(6) + "\n\n\n");
                 x = false;
             }
 
