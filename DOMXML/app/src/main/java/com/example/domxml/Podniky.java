@@ -29,7 +29,7 @@ public class Podniky {
     public void printPodnikyByName(String str, TextView textview){
         boolean x = true;
         for (int i = 0; i < list.size(); i++){
-            if (list.get(i).getObchodne_Meno().contains(str)){
+            if (list.get(i).getObchodne_Meno().toLowerCase().contains(str.toLowerCase())  || list.get(i).getPrevadzka().toLowerCase().contains(str.toLowerCase())){
                 textview.setText(textview.getText() + list.get(i).getObchodne_Meno() + "\n");
                 textview.setText(textview.getText() + list.get(i).getPrevadzka() + "\n");
                 textview.setText(textview.getText() + list.get(i).getCinnost() + "\n");
